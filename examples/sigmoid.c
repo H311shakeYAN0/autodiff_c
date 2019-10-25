@@ -8,9 +8,9 @@
 // sigmoid function
 // a: gain
 adv sigmoid(adv a, adv x) {
-  return addiv(
-      advar(1),
-      adadd(advar(1), adexp(adsub(advar(0), admul(a, x))))); // 1/(1+e^(-ax))
+  return addiv(adconst(1.0),
+               adadd(adconst(1.0),
+                     adexp(adsub(adconst(0.0), admul(a, x))))); // 1/(1+e^(-ax))
 }
 
 int main(void) {
