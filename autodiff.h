@@ -13,6 +13,8 @@ typedef struct {
   unsigned int len;
 } advl;
 adv advar(double a);
+adv adconst(double a);
+void setadv(adv *a, double v, double dv);
 advl setadvl(unsigned int n, ...);
 void adselect(adv *x, advl vl);
 adv adadd(adv a, adv b); // a + b
