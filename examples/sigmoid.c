@@ -1,5 +1,4 @@
 #include "../autodiff.h"
-#include <math.h>
 #include <stdio.h>
 
 #define N 100
