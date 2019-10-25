@@ -16,13 +16,10 @@ adv sigmoid(adv a, adv x) {
 
 int main(void) {
   adv a, x, y;
-  advl vl;
   double h = (XMAX - XMIN) / N;
-  a = advar(1.0);
-  vl = setadvl(2, &a, &x);
+  a = adconst(1.0);
   for (int i = 0; i <= N; i++) {
-    x = advar(XMIN + i * h);
-    adselect(&x, vl);
+    setadv(&x, XMIN + i * h, 1.0);
     y = sigmoid(a, x);
     printf("%f %f %f\n", x.v, y.v, y.dv);
   }
