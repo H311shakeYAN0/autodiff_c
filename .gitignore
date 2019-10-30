@@ -3,5 +3,6 @@
 *.out
 *.dat
 *.gp
+*.pdf
 .DS_Store
 test/
